@@ -1,0 +1,160 @@
+/* === BODY with Background Image === */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* color: #2c3e50; */
+    background: url("/static/back.jpg") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+/* === OVERLAY === */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 0;
+}
+
+/* === HEADER === */
+header {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to right, #000000, #747575);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container h1 {
+    color: white;
+    font-size: 30px;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* === MAIN === */
+main {
+    position: relative;
+    z-index: 1;
+    min-height: calc(100vh - 160px);
+}
+
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* === FORM === */
+.container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #34495e;
+    font-size: 26px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 15px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 6px rgba(52, 152, 219, 0.4);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input[type="file"] {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border: 1px dashed #aaa;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 15px;
+}
+
+input[type="file"]:hover {
+    background-color: #eaeaea;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background: linear-gradient(to right, #4facfe, #384445);
+    color: #fff;
+    padding: 14px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(to right, #141414, #424545);
+    transform: translateY(-1px);
+}
+
+/* === FOOTER === */
+footer {
+    position: relative;
+    z-index: 1;
+    background: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .header-container h1 {
+        font-size: 24px;
+    }
+
+    .container h2 {
+        font-size: 22px;
+    }
+}

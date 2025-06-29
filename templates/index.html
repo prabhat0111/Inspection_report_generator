@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fire Inspection Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; 
+             background: url('static/pen.jpg') no-repeat center center fixed; 
+             background-size: cover;">
+    <!-- Background overlay for readability -->
+    <div class="overlay"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1>Inspection Report Portal</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h2>Generate Inspection Report</h2>
+            <form action="/" method="post" enctype="multipart/form-data">
+                <label for="insured_name">Insured Name:</label>
+                <input type="text" name="insured_name" id="insured_name" required>
+
+                <label for="address">Address:</label>
+                <input type="text" name="address" id="address" required>
+
+                <label for="insurer">Insurer:</label>
+                <input type="text" name="insurer" id="insurer">
+
+                <label for="claim_number">Claim Number:</label>
+                <input type="text" name="claim_number" id="claim_number">
+
+                <label for="date_of_inspection">Date of Inspection:</label>
+                <input type="date" name="date_of_inspection" id="date_of_inspection">
+
+                <label for="date_of_loss">Date of Loss:</label>
+                <input type="date" name="date_of_loss" id="date_of_loss">
+
+                <label for="date_of_report">Date of Report:</label>
+                <input type="date" name="date_of_report" id="date_of_report">
+
+                <label for="type_of_loss">Type of Loss:</label>
+                <input type="text" name="type_of_loss" id="type_of_loss">
+
+                <label for="cause_of_loss">Cause of Loss:</label>
+                <textarea name="cause_of_loss" id="cause_of_loss"></textarea>
+
+                <label for="indemnity_work">Indemnity Work Estimate:</label>
+                <input type="text" name="indemnity_work" id="indemnity_work">
+
+                <label for="listing_pricing_reserve">Listing & Pricing Reserve:</label>
+                <input type="text" name="listing_pricing_reserve" id="listing_pricing_reserve">
+
+                <label for="contents_loss_reserve">Total Contents Loss Reserve:</label>
+                <input type="text" name="contents_loss_reserve" id="contents_loss_reserve">
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="photos">Upload Photos:</label>
+                <input type="file" name="photos" id="photos" multiple>
+
+                <input type="submit" value="Generate Report">
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Trinity Fire Services | Confidential Report Generator</p>
+        </div>
+    </footer>
+
+</body>
+</html>
