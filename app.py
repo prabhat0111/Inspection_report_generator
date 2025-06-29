@@ -33,7 +33,7 @@ def index():
             "email": request.form['email']
         }
 
-        # Save photos
+        
         photo_folder = os.path.join(app.config['UPLOAD_FOLDER'], data["claim_number"])
         os.makedirs(photo_folder, exist_ok=True)
         for file in request.files.getlist('photos'):
@@ -42,14 +42,14 @@ def index():
 
         word_path, pdf_path = generate_report_and_pdf(data, photo_folder, app.config['REPORT_FOLDER'])
 
-        # Log to CSV
+        
         with open('report_log.csv', 'a', newline='') as f:
             writer = csv.writer(f)
             if f.tell() == 0:
                 writer.writerow(data.keys())
             writer.writerow(data.values())
 
-        # Email report
+        # Email 
         msg = EmailMessage()
         msg['Subject'] = f"Inspection Report - {data['claim_number']}"
         msg['From'] = EMAIL_USER

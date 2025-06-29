@@ -1,15 +1,14 @@
-/* === BODY with Background Image === */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    /* color: #2c3e50; */
+    
     background: url("/static/back.jpg") no-repeat center center fixed;
     background-size: cover;
     position: relative;
 }
 
-/* === OVERLAY === */
 .overlay {
     position: fixed;
     top: 0;
@@ -20,7 +19,6 @@ body {
     z-index: 0;
 }
 
-/* === HEADER === */
 header {
     position: relative;
     z-index: 1;
@@ -37,7 +35,6 @@ header {
     font-weight: bold;
 }
 
-/* === MAIN === */
 main {
     position: relative;
     z-index: 1;
@@ -53,7 +50,6 @@ main {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* === FORM === */
 .container h2 {
     text-align: center;
     margin-bottom: 30px;
@@ -126,7 +122,6 @@ input[type="submit"]:hover {
     transform: translateY(-1px);
 }
 
-/* === FOOTER === */
 footer {
     position: relative;
     z-index: 1;
@@ -143,7 +138,6 @@ footer {
     padding: 0 20px;
 }
 
-/* === RESPONSIVE === */
 @media (max-width: 768px) {
     .container {
         margin: 20px;

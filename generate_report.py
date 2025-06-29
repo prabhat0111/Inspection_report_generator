@@ -31,7 +31,7 @@ def generate_report_and_pdf(data, photo_folder, report_folder):
     add_normal_paragraph(doc, f"DATE OF REPORT: {data['date_of_report']}")
     add_normal_paragraph(doc, f"TYPE OF LOSS: {data['type_of_loss']}")
 
-    # Front photo (if exists)
+    # Fron
     front_photo = next((f for f in os.listdir(photo_folder) if 'front' in f.lower()), None)
     if front_photo:
         doc.add_picture(os.path.join(photo_folder, front_photo), width=Inches(4.5))
@@ -58,7 +58,7 @@ def generate_report_and_pdf(data, photo_folder, report_folder):
 
     add_normal_paragraph(doc, "\nThank You,\n\nMo Waez\nTrinity Contents Management\nmo@trinitycontents.com\n(647) 613-2246")
 
-    # ➤ Grouped Photos
+    
     section_keywords = {
         "KITCHEN & DINING AREA": ["kitchen", "dining"],
         "LIVING ROOM": ["living"],
